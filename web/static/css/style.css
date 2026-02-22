@@ -1,0 +1,84 @@
+/* Trend indicators - custom transforms not available in Tailwind */
+.trend-up {
+    transform: rotate(45deg);
+}
+
+.trend-down {
+    transform: rotate(135deg);
+}
+
+/* Blink animation */
+@keyframes blink {
+    50% { opacity: 0.5; }
+}
+
+.blink {
+    animation: blink 1s step-start 0s infinite;
+    animation-timing-function: ease-in-out;
+}
+
+/* Hidden header cell */
+.th-hidden {
+    border: 0 !important;
+    user-select: none;
+}
+
+/* Rotated column headers for narrow width */
+.col-rotate {
+    vertical-align: bottom;
+    width: 1.5em;
+    padding: 0.25rem 0.15rem !important;
+    text-align: center;
+}
+
+.col-rotate span {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    display: inline-block;
+    white-space: nowrap;
+}
+
+/* Tom Select overrides to match form inputs */
+.ts-wrapper {
+    min-height: 38px;
+}
+
+.ts-wrapper .ts-control {
+    border: none !important;
+    padding: 0.5rem 0.75rem;
+    min-height: 38px;
+}
+
+.ts-wrapper .ts-control input {
+    font-size: 0.875rem;
+}
+
+.ts-wrapper .item {
+    background-color: #e5e7eb;
+    border: none;
+    padding: 2px 8px;
+    margin: 2px 4px 2px 0;
+    border-radius: 4px;
+    font-size: 0.875rem;
+}
+
+.ts-wrapper .item .remove {
+    border-left: 1px solid #d1d5db;
+    margin-left: 6px;
+    padding-left: 6px;
+}
+
+.ts-wrapper .ts-dropdown {
+    border: 1px solid #d1d5db;
+    border-radius: 4px;
+    margin-top: 2px;
+}
+
+.ts-wrapper .ts-dropdown .option {
+    padding: 6px 12px;
+}
+
+.ts-wrapper .ts-dropdown .option.active,
+.ts-wrapper .ts-dropdown .option:hover {
+    background-color: #f3f4f6;
+}
